@@ -1,0 +1,40 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "bodygotchi",
+          "appId": "1:452174780792:android:e9fb60c9e0ffeac8bdd08d",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "bodygotchi",
+          "appId": "1:452174780792:ios:265c5abdadc152d3bdd08d",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "bodygotchi",
+          "appId": "1:452174780792:ios:265c5abdadc152d3bdd08d",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "bodygotchi",
+          "configurations": {
+            "android": "1:452174780792:android:e9fb60c9e0ffeac8bdd08d",
+            "ios": "1:452174780792:ios:265c5abdadc152d3bdd08d",
+            "macos": "1:452174780792:ios:265c5abdadc152d3bdd08d",
+            "web": "1:452174780792:web:3dc0dfa90101d4cebdd08d"
+          }
+        }
+      }
+    }
+  }
+}

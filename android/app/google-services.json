@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "452174780792",
+    "project_id": "bodygotchi",
+    "storage_bucket": "bodygotchi.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452174780792:android:e9fb60c9e0ffeac8bdd08d",
+        "android_client_info": {
+          "package_name": "com.example.bodygotchi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452174780792-ilfuv5666eu8m3rdl7jr5p7dckt7k22c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGUSip-GXzZ6P0f2l5K0Chw3trxhkTJo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452174780792-ilfuv5666eu8m3rdl7jr5p7dckt7k22c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "452174780792-girt52v2umubpe4ukr80aeqfco5dfrmc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bodygotchi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
