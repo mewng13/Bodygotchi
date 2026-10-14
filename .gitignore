@@ -44,5 +44,5 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Embedded demo API key — keep out of source control
-lib/services/secret_key.dart
+# Anthropic API key, passed via --dart-define-from-file=secrets.json
+secrets.json

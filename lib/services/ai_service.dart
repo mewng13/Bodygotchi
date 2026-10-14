@@ -4,7 +4,6 @@ import 'package:http/http.dart' as http;
 
 import '../models/diet.dart';
 import '../models/workout.dart';
-import 'secret_key.dart';
 
 /// The AI's recommendation for a workout program.
 class RoutineRecommendation {
@@ -48,20 +47,17 @@ class RoutineRecommendation {
 /// Calls Claude directly from the app to build a personalized workout program
 /// from the user's InBody data, goals, and training conditions.
 ///
-/// The API key is injected at build/run time with:
-///   flutter run --dart-define=ANTHROPIC_API_KEY=sk-ant-...
-/// so it never lives in source control. If no key is supplied (or the request
+/// The API key is injected at build/run time from the gitignored secrets.json:
+///   flutter run --dart-define-from-file=secrets.json
+/// (see secrets.example.json) so it never lives in source control. If no key is supplied (or the request
 /// fails), [recommendRoutine] falls back to a sensible local plan.
 class AiService {
   AiService._();
   static final AiService instance = AiService._();
 
-  // Uses --dart-define=ANTHROPIC_API_KEY if provided, otherwise falls back to
-  // the embedded demo key in secret_key.dart so the app works standalone.
-  static const String _apiKey = String.fromEnvironment(
-    'ANTHROPIC_API_KEY',
-    defaultValue: kEmbeddedAnthropicKey,
-  );
+  // Empty when no key is supplied, in which case every call uses the local
+  // fallback instead of hitting the API.
+  static const String _apiKey = String.fromEnvironment('ANTHROPIC_API_KEY');
   static const String _model = 'claude-opus-4-8';
   static final Uri _endpoint = Uri.parse('https://api.anthropic.com/v1/messages');
 

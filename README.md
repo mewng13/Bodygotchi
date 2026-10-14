@@ -15,3 +15,14 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## AI features (Claude API key)
+
+The AI trainer reads its key at build time and never from source:
+
+```sh
+cp secrets.example.json secrets.json   # then put your key in secrets.json (gitignored)
+flutter run --dart-define-from-file=secrets.json
+```
+
+Without a key, the app falls back to local, non-AI recommendations.
